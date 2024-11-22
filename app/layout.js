@@ -1,6 +1,8 @@
 import Header from "./_components/Header";
 
+// VERCEL ANALYTICS
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 import { SessionProvider } from "next-auth/react";
 
@@ -42,6 +44,7 @@ export default function RootLayout({ children }) {
           </body>
         </html>
       </AuthProvider>
+      <Analytics />
       <SpeedInsights />
     </SessionProvider>
   );
